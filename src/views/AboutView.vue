@@ -13,7 +13,6 @@ function Delay() {
   })
 }
 async function foo() {
-  // console.log('foo')
   Promise.resolve('foo').then(res => {
     console.log(res);
   })
