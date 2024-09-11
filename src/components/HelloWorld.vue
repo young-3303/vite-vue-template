@@ -1,8 +1,13 @@
 <script setup lang="ts">
 
-defineProps<{
+interface Props {
   msg: string
-}>()
+  list: string []
+}
+const props = withDefaults(defineProps<Props>(), {
+  msg: '',
+  list: () => []
+})
 </script>
 
 <template>
