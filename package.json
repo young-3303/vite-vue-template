@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode gray",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
@@ -13,8 +13,10 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@vant/compat": "^1.0.1",
     "pinia": "^2.1.7",
     "vant": "^4.9.3",
+    "vite-plugin-require": "^1.2.14",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
