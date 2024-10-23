@@ -18,7 +18,8 @@
     "vant": "^4.9.3",
     "vite-plugin-require": "^1.2.14",
     "vue": "^3.4.29",
-    "vue-router": "^4.3.3"
+    "vue-router": "^4.3.3",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

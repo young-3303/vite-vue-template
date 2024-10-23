@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import {Toast} from '@vant/compat'
 interface Props {
   msg: string
   list: string []
