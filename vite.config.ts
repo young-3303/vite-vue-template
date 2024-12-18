@@ -21,7 +21,7 @@ export default defineConfig({
       // 手动添加更新颗粒度的相关polyfills
       // polyfills: [],
       // 如果开发者希望添加非corejs的polyfill，就加在这个字段里面
-      // additionalLegacyPolyfills: [''],
+      additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       targets: [
         'defaults',
         'Chrome >= 55',
