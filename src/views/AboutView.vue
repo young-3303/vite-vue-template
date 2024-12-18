@@ -18,7 +18,7 @@ async function foo() {
   })
 }
 onMounted( async () => {
-  foo()
+  console.log('', Object.hasOwn)
 })
 </script>
 <template>
