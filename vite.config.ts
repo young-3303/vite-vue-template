@@ -23,12 +23,11 @@ export default defineConfig({
       // 如果开发者希望添加非corejs的polyfill，就加在这个字段里面
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       targets: [
-        'defaults',
-        'Chrome >= 55',
-        'Safari >= 10',
-        'not IE 11',
+        'chrome>=55',
+        'Safari>=10',
+        'ios>=12',
+        'Android>=5',
       ],
-      polyfills: true
     })
   ],
   resolve: {
@@ -39,5 +38,25 @@ export default defineConfig({
   build: {
     // 默认modules，es2015选项可以对语法进行降级es6
     // target: 'es2015',
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+        },
+        // 将入口chunk和异步chunk输出到js目录下
+        entryFileNames: `assets/js/[name].js`,
+        chunkFileNames: `assets/js/[name]-[hash].js`,
+        assetFileNames: ({ name }) => {
+          if (/\.(css|scss|sass)$/.test(name || '')) {
+            return `assets/css/[name]-[hash].[ext]`;
+          }
+          // 其他资源（如图片、字体等）保持在assets目录下
+          return `assets/[name]-[hash].[ext]`;
+        }
+
+      }
+    }
   }
 })
