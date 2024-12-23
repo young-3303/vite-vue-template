@@ -16,6 +16,7 @@
     "@vant/compat": "^1.0.1",
     "pinia": "^2.1.7",
     "vant": "^4.9.3",
+    "vconsole": "^3.15.1",
     "vite-plugin-require": "^1.2.14",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3",
@@ -46,5 +47,11 @@
   },
   "volta": {
     "node": "18.20.4"
-  }
+  },
+  "browserslist": [
+    "chrome>=55",
+    "Safari>=10",
+    "ios>=12",
+    "Android>=5"
+  ]
 }
