@@ -59,6 +59,7 @@ export default defineConfig({
     build: {
         // 默认modules，es2015选项可以对语法进行降级es6
         target: 'es2015',
+        cssTarget: ['chrome55'],
         rollupOptions: {
             output: {
                 manualChunks(id) {
